@@ -10,7 +10,7 @@
   "main": "gatsby-node.js",
   "license": "MIT",
   "scripts": {
-    "build": "babel src --out-dir dist --ignore **/__tests__",
+    "build": "babel src --out-dir dist",
     "watch": "babel --watch src --out-dir dist --ignore **/__tests__",
     "format": "prettier --write src/**/*.js",
     "clean": "rm -rf dist",
@@ -41,5 +41,6 @@
     "all",
     "post",
     "fetch"
-  ]
+  ],
+  "packageManager": "yarn@3.5.0"
 }

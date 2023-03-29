@@ -12,9 +12,9 @@ async function sourceNodes({ actions, createNodeId, getCache }, configOptions) {
   const { createNode } = actions
   delete configOptions.plugins
   const config = { ...defaultOptions, ...configOptions }
-  const { limit } = config
+  const { limit, account_id } = config
   const apiOptions = queryString.stringify({limit: config.pageLimit, access_token: config.access_token})
-  const apiUrl = `https://graph.instagram.com/me/media?fields=id,media_url,media_type,permalink,timestamp,caption,username,thumbnail_url,children{id,media_url,media_type,thumbnail_url,timestamp}&${apiOptions}`
+  const apiUrl = `https://graph.facebook.com/v16.0/${account_id}/media?fields=id,media_url,media_type,permalink,timestamp,caption,username,thumbnail_url,children{id,media_url,media_type,thumbnail_url,timestamp}&${apiOptions}`
 
 
   // Helper function to fetch and parse data to JSON
