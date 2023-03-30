@@ -1,6 +1,5 @@
 !index.js
 node_modules
-dist
 .idea
 
 .pnp.*
