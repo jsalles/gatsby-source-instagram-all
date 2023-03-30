@@ -15,7 +15,8 @@
     "format": "prettier --write src/**/*.js",
     "clean": "rm -rf dist",
     "prepublishOnly": "yarn run build",
-    "prepare": "yarn run build"
+    "prepare": "yarn run build",
+    "prepack": "yarn run build"
   },
   "dependencies": {
     "gatsby-source-filesystem": "^5.2.0",
